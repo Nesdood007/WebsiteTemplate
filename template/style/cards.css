@@ -4,8 +4,8 @@
 
 section.flashcard {
   min-height: 100vh;
-  background: rgb(255,35,15);
-  background: linear-gradient(146deg, rgba(255,35,15,1) 0%, rgba(38,130,166,1) 50%, rgba(187,229,36,1) 100%);
+  background: #111;
+  /*background: linear-gradient(146deg, rgba(255,35,15,1) 0%, rgba(38,130,166,1) 50%, rgba(187,229,36,1) 100%);*/
   background-attachment: fixed;
   color: white; /* Default to Light */
   display: flex;
@@ -15,12 +15,18 @@ section.flashcard {
   justify-content: center;
 }
 
+section.flashcard.rainbow {
+  background: rgb(255,35,15);
+  background: linear-gradient(146deg, rgba(255,35,15,1) 0%, rgba(38,130,166,1) 50%, rgba(187,229,36,1) 100%);
+}
+
 section.flashcard.img {
   background-image: url("/temp/bg1.jpg"); /* This is a Demonstration Image */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  background-color: #ccc;
 }
 
 section.flashcard div.container {
@@ -60,7 +66,7 @@ section.flashcard p {
 }
 
 /* Left/Right Container */
-section.flashcard div.lr-container {
+div.lr-container {
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
@@ -70,11 +76,11 @@ section.flashcard div.lr-container {
   align-content: stretch;
 }
 
-section.flashcard div.lr-container > div {
+div.lr-container > div {
   width: 50%;
 }
 
-section.flashcard div.backdrop {
+div.backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -84,7 +90,7 @@ section.flashcard div.backdrop {
 
 section.titlecard {
   min-height: 50vh;
-  color: white; /* Default to Light */
+  background-color: white; /* Default to Light */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

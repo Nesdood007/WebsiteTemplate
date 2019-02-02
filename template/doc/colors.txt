@@ -1,0 +1,31 @@
+Main Colors for site:
+#F0F7D4 - Off-white
+#BBE524 - Greenish
+#FF230F - Red
+#2682A6 - Light Blueish
+#002C3D - Dark Blue - Menu
+
+
+Other Colors:
+#ffffff (white)
+#000000 (black)
+#808080 (gray)
+#004966 (Lighter Blue) - Menu, selected.
+#00121a (really dark blue) - Footer, top part
+#555555 (gray) - Used for header and footer box-shadows
+#111111 (Really Dark Gray) - Used for Navigator Bar
+
+#ff5100 (orange) #fb9902 - Another Accent Color? This color may need to be edited.
+
+#ffc30f (bright yellow) - Used for Warning Box
+#fff9e6 (really Bright Yellow) - Used for Background of Warning Box
+
+#ffd0cc (light red) - Background of Error Box
+
+#dcf28d (light Green) - Tag Color 1
+#ff8a80 (light Red) - Tag Color 2
+#97d1e7 (light Blue) - Tag Color 3
+#fecc81 (light Orange) - Tag Color 4
+
+#82c7e3 - (Lighter Blue) Article Header Link Selection
+#ceec5f - (Lighter Green) Main Link Selection

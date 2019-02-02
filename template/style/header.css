@@ -11,16 +11,16 @@ header div#title {
   height: 25%;
   text-align: center;
   font-family: title;
-  font-size: 30rem;
   margin: 0px;
   padding: 5px 0px;
   color: white;
+  overflow: hidden;
 }
 
 header div#title p {
   font-family: menu;
   font-size: 1rem;
-  color: #ddd;
+  color: #ccc;
 }
 
 header div#title h1 {
@@ -30,15 +30,15 @@ header div#title h1 {
   font-size: 5rem;
 }
 
-header div#title h1 span.color2 {
+header div#title .garnet {
   color: #73000a;
 }
 
-header div#title h1 span.color1 {
+header div#title .blue {
   color: #2682A6;
 }
 
-header div#title h1 span.color0 {
+header div#title .black {
   color: black;
 }
 
@@ -57,6 +57,15 @@ header div#menu ul {
   justify-content: space-between;
   width: 100%;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+  header div#menu ul {
+    flex-direction: column;
+  }
+  header div#menu ul.right {
+    right: auto;
+  }
 }
 
 header div#menu {
@@ -114,20 +123,19 @@ header ul li a:active {
 
 /* Dropdown Hover Menus */
 header div#menu .dropdown {
-  color: blue;
+  /*color: blue;*/
 }
 
 /* Keep Hover Effect Active while the Menu is open */
 header div#menu .dropdown:hover {
   color: white;
   background-color: #111111;
-  border-bottom: 0px;
 }
 /* Fix for Link Glitch */
 header div#menu .dropdown:hover > a {
   color: white;
   background-color: #111111;
-  border-bottom: 0px;
+  border-bottom: 5px solid #111111;
 }
 
 /* Makes the Drop-down Menu Appear */
@@ -146,6 +154,25 @@ header div#menu .dropdownContent {
   text-align: left;
   padding: 0px;
   margin: 0px;
+}
+
+@media only screen and (max-width: 767px) {
+  header div#menu .dropdownContent {
+    min-width: 100%;
+    display: block; /* Currently Display them since it is hard to tap */
+    position: relative;
+    z-index: 0;
+    box-shadow: none;
+    text-align: center;
+  }
+  header div#menu .dropdownContent.right {
+    right: auto;
+  }
+}
+
+/* Correctly Aligns the Rightmost menu so that it doesn't cause horizontal scrolling */
+header div#menu .dropdownContent.right {
+  right: 0;
 }
 
 header.sidebar div#menu .dropdownContent {
@@ -185,6 +212,14 @@ header.oneline {
   z-index: 1;
 }
 
+@media only screen and (max-width: 767px) {
+  header.oneline {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 /* Make it above the First Flashcard */
 header.oneline.abs {
   position: absolute;
@@ -200,11 +235,11 @@ header.oneline.abs div {
 }
 
 header.oneline.abs div#title {
-  margin-left: 1em !important;
+  margin-left: 1em;
 }
 
 header.oneline.abs div#menu {
-  margin-right: 1em !important;
+  margin-right: 1em;
   color: white;
 }
 
@@ -234,7 +269,7 @@ header.oneline div#menu .dropdownContent * {
 
 /* Start Header Light/Dark Stylings */
 
-header.oneline.light div#title h1 span.color0 {
+header.oneline.light div#title h1 span.black {
   color: white !important;
 }
 
@@ -251,13 +286,19 @@ header.oneline.light li :not(a) {
 
 /* Title Section of Header */
 header.oneline div#title {
-  text-align: left;
+  text-align: center;
   font-family: title;
   font-size: 30px;
   margin: 0px;
   padding: 5px 0px;
   color: black;
   width: 30%;
+}
+
+@media only screen and (max-width: 767px) {
+  header.oneline div#title {
+    width: 100%;
+  }
 }
 
 header.oneline div#title h1 {
@@ -283,6 +324,12 @@ header.oneline div#menu {
   width: 70%;
   height: auto;
   margin: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  header.oneline div#menu {
+    width: 100%;
+  }
 }
 
 header.oneline div#menu ul {
@@ -311,7 +358,7 @@ header.oneline li > a {
 /* Menu Elements */
 header.oneline li {
   float: left;
-  width: 20%; /* [was 20%] If new items added, change this */
+  width: 100%; /* [was 20%] If new items added, change this */
 }
 
 header.oneline li :not(a) {

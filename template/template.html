@@ -8,14 +8,17 @@
     <link rel="stylesheet" type="text/css" href="style/content.css">
     <link rel="stylesheet" type="text/css" href="style/cards.css">
     <link rel="stylesheet" type="text/css" href="style/article.css">
-    <meta charset="UTF-8"> 
+    <link rel="stylesheet" type="text/css" href="style/misc.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon.png">
   </head>
   <body>
     <!-- This is the Header of the Page -->
-    <header>
-      <div id="title">
-        <h1><span class="color0">ACM</span><span class="color1">@</span><span class="color2">USC</span></h1>
-        <p> Association of Computing Machinery at the University of South Carolina </p>
+    <header class="">
+      <div id="title" class="container">
+        <h1><span class="black">ACM</span><span class="blue">@</span><span class="garnet">USC</span></h1>
+        <p class="subtitle"> Association for Computing Machinery at the University of South Carolina </p>
       </div>
       <div id="menu">
         <ul>
@@ -237,8 +240,10 @@
           </address>
           <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
           <bdo dir="rtl">This text will be written from right to left</bdo>
-          <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+          <p>Save the document by pressing <kbd class="dark">Ctrl</kbd> +  <kbd>S</kbd></p>
+          <p> Testing the Keyboard... <kbd class="dark">Ctrl</kbd> + <kbd class="dark">Alt</kbd> + <kbd class="dark">Super</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd> + <kbd>X</kbd> </p>
           <p>If you input wrong value, the program will return <samp>Error!</samp></p>
+          <p> Pressing <kbd class="dark">Ctrl</kbd> + <kbd>C</kbd> will print <samp>^C</samp></p>
           <pre>
             <code>x = 5;</code>
             <code>y = 6;</code>
@@ -392,67 +397,50 @@
     <!-- this is the footer of the page -->
     <footer>
       <div id="footer-top">
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <dl>
-                  <dt class="color0"><a href="https://cse.sc.edu"> Section Title </a></dt>
-                  <dd><a href="https://sc.edu"> link </a></dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                </dl>
-              </td>
-              <td>
-                <dl>
-                  <dt class="color1"><a href="https://cse.sc.edu"> Section Title </a></dt>
-                  <dd><a href="https://sc.edu"> link </a></dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                </dl>
-              </td>
-              <td>
-                <dl>
-                  <dt class="color2"><a href="https://cse.sc.edu"> Section Title </a></dt>
-                  <dd><a href="https://sc.edu"> link </a></dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                </dl>
-              </td>
-              <td>
-                <dl>
-                  <dt class="color3"><a href="https://cse.sc.edu"> Section Title </a></dt>
-                  <dd><a href="https://sc.edu"> link </a></dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                  <dd> link </dd>
-                </dl>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="container">
+          <dl>
+            <dt class="green"> <a href="https://cse.sc.edu"> Section Title </a> </dt>
+            <dd><a href="https://sc.edu"> link </a></dd>
+            <dd> link </dd>
+            <dd> link </dd>
+            <dd> link </dd>
+            <dd> link </dd>
+            <dd> link </dd>
+          </dl>
+          <dl class="column">
+            <dt class="red"> <a href="https://cse.sc.edu"> Section Title </a> </dt>
+            <dd><a href="https://sc.edu"> link </a></dd>
+            <dd> link </dd>
+            <dd> link </dd>
+            <dd> link </dd>
+            <dd> link </dd>
+            <dd> link </dd>
+          </dl>
+          <dl class="column">
+            <dt class="blue"> <a href="https://cse.sc.edu"> Section Title </a> </dt>
+            <dd><a href="https://sc.edu"> link </a></dd>
+            <dd> link </dd>
+            <dd> link </dd>
+            <dd> link </dd>
+            <dd> link </dd>
+            <dd> link </dd>
+          </dl>
+          <dl class="column">
+            <dt class="orange"> <a href="https://cse.sc.edu"> Section Title </a> </dt>
+            <dd><a href="https://sc.edu"> link </a></dd>
+            <dd> link </dd>
+            <dd> link </dd>
+            <dd> link </dd>
+            <dd> link </dd>
+            <dd> link </dd>
+          </dl>
+        </div>
       </div>
       <div id="footer-bottom">
-        <table>
-          <tr>
-            <td> Template Test </td>
-            <td> 2018 - GradeForge </td>
-            <td> Other... </td>
-          </tr>
-        </table>
+        <div class="left"> Template Test </div>
+        <div> 2018 - GradeForge </div>
+        <div class="right"> Other... </div>
       </div>
     </footer>
-  
   </body>
 </html>

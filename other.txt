@@ -1,0 +1,17 @@
+https://goo.gl/qRE0vM -> Tab Colors!
+
+Make a smaller <hr> to go into a Titlecard that can be white or black depending on how it is set.
+
+Revise the Footer Lower Bar. MAke it take up the fill width, with a much smaller margin. Icons can be placed there to link to other websites (like Github, USC's website, etc.)
+
+Make Things for Time, Date, and Location where there is an icon, and it's obvious how things are laid out. This makes it nice and skimmable to add information about an event.
+
+Make a Grid Container for things like the people page, and Partners/Sponsors page in the ACM Website.
+
+Make an Exernal Link Span class
+
+Fix Spacing of Text Sections
+
+Revise <nav> to be simpler, and use <h1>, <ul>, <li>, <a>, and anything else that can go into a <li>
+
+Finish usage.md to include code examples of everything, and which .css file the component is located in

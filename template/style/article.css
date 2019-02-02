@@ -32,7 +32,7 @@ article h1 {
   padding: 0px;
 }
 
-article h1 a:link {
+article h1 a:link, article h1 a:visited {
   color: #2682A6;
   text-decoration: none;
 }
@@ -98,7 +98,7 @@ article .continue {
   margin: 5px 0px;
 }
 
-article a:link.continue {
+article a:link.continue, article a:visited.continue {
   color: black;
   text-decoration: none;
   display: block;

@@ -16,6 +16,8 @@ main div.ts p {
 main div.ts h1 {
   border-left: 0px;
   color: gray;
+  padding: 0;
+  margin: 0 0 10px 0;
 }
 
 main div.ts.note {
@@ -76,3 +78,53 @@ main pre code:before {
   margin-right: .5em;
 }
 /* END Code Display Box */
+
+/* Block for Date / Time / Location Descriptors in a document */
+
+.time {
+  color: black;
+  display: block;
+  font-family: semibold;
+  font-size: 1.5em;
+  background-image: url("/img/clock.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0 0 0 1.5em;
+}
+
+
+.date {
+  color: black;
+  display: block;
+  font-family: semibold;
+  font-size: 1.5em;
+  background-image: url("/img/calendar.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0 0 0 1.5em;
+}
+
+.location {
+  color: black;
+  display: block;
+  font-family: semibold;
+  font-size: 1.5em;
+  background-image: url("/img/map.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0 0 0 1.5em;
+}
+
+.downloads {
+  color: black;
+  display: block;
+  font-family: semibold;
+  font-size: 1.5em;
+  background-image: url("/img/download.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0 0 0 1.5em;
+  border-bottom: 1px solid #333;
+}
+
+/* END Time/Date/Location/Downloads Block */

@@ -3,5 +3,5 @@ https://sc.edu/about/offices_and_divisions/communications/brand_toolbox/design_e
 #73000a - Main Garnet Color
 
 Menu Gradient:
- background: rgb(32,32,32);
+background: rgb(32,32,32);
 background: radial-gradient(circle, rgba(32,32,32,1) 0%, rgba(17,17,17,1) 100%); 
