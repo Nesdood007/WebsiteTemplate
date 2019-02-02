@@ -21,6 +21,7 @@ footer div#footer-top .container {
   display: flex;
   flex-direction: row;
   padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -33,12 +34,7 @@ footer div#footer-top .container dt {
   font-family: bold;
   font-size: 17px;
   margin: 0px 0px 5px 0px;
-  padding: 1px;
-}
-
-footer div#footer-top .container dd {
-  margin: 5px 0px;
-  padding: 1px;
+  padding: 1px 0px;
 }
 
 footer div#footer-top .container dl {
@@ -53,7 +49,8 @@ footer div#footer-top dl {
 }
 
 footer div#footer-top dl dd {
-  margin: 0px;
+  margin: 1px 0px;
+  padding: 0px;
 }
 
 footer div#footer-top .container a:link, footer div#footer-top .container a:visited {

@@ -84,6 +84,10 @@ div.backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+section.flashcard hr {
+  border-color: white;
+}
+
 /* END Flashcards */
 
 /* START TitleCards */
@@ -135,6 +139,10 @@ section.titlecard h1 {
 section.titlecard p {
   font-size: 20px;
   font-family: semibold;
+}
+
+section.titlecard hr {
+  border-color: white;
 }
 
 /* END TitleCards */

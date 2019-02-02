@@ -119,6 +119,10 @@ main.sidebar {
   overflow: auto;
 }
 
+.container.left {
+  
+}
+
 /* Maked Margins Smaller for Mobile Screens */
 @media only screen and (max-width: 767px) {
   .container {
@@ -284,6 +288,10 @@ hr {
   border-style: solid;
   border-color: #999;
   margin: 10px 0px;
+}
+
+hr.white {
+  border-color: white;
 }
 
 /* Table Styling */
