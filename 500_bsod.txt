@@ -1,0 +1,16 @@
+In the Style of the windows 95 BSOD
+https://en.wikipedia.org/wiki/Blue_Screen_of_Death
+
+
+acm.cse.sc.edu
+
+An error has occured. To Continue:
+
+Press Refresh to return to the Website, or
+
+Press CTRL+ALT+DEL to restart your computer. If you do this,
+you will lose any unsaved information in all open applications.
+
+Error: 500 Internal Server Error
+
+Press any key to continue _

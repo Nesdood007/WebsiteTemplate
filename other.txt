@@ -7,3 +7,11 @@ Make an Exernal Link Span class
 Revise <nav> to be simpler, and use <h1>, <ul>, <li>, <a>, and anything else that can go into a <li>
 
 Finish usage.md to include code examples of everything, and which .css file the component is located in
+
+Fix Time, Date, Location Things so that they use an image in the :before psuedo-element instead of the background, as it looks bad when it spans over 2 lines.
+
+Specify Emojii Font. https://github.com/mozilla/twemoji-colr
+
+Make edits to how the ACM Index Header Works. It shouldn't take up so much room.
+
+Look into styling Printer Thigns
