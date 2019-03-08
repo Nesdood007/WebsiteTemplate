@@ -117,6 +117,7 @@ main.sidebar {
 .container {
   margin: 0% 20%;
   overflow: auto;
+  width: 60%;
 }
 
 .container.left {
@@ -127,6 +128,7 @@ main.sidebar {
 @media only screen and (max-width: 767px) {
   .container {
     margin: 0% 1%;
+    width: 98%;
   }
 }
 
@@ -268,6 +270,22 @@ main figure figcaption {
   padding: 5px 5px 5px 20px;
   font-family: ultralight;
   border-left: 5px solid #004966;
+}
+
+main figure.white {
+  background-color: white;
+  color: #333;
+  font-family: bold;
+  padding: 5px;
+  margin: 0;
+}
+
+main figure.white figcaption {
+  color: #333;
+  font-family: bold;
+  border-left: 0;
+  text-align: center;
+  padding: 0;
 }
 
 img.noresize {
