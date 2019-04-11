@@ -230,6 +230,11 @@ main h6 {
   padding: 1px 1px 1px 10px;
 }
 
+main *.no-line {
+  border-left: 0;
+  padding: 0;
+}
+
 main .invert {
   background-color: #333;
   color: white;
@@ -377,8 +382,8 @@ details {
   font-family: semibold;
 }
 
-/* Removes the Twisty Triangle */
-details > summary::-webkit-details-marker {
+/* Removes the Twisty Triangle. Only works in Chrome */
+details summary::-webkit-details-marker {
   display: none;
 }
 
@@ -486,4 +491,22 @@ samp {
 dl dt {
   font-family: semibold;
 }
+
+/* BEGIN Text Alignment */
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+/* END Text Alignment */
+
+/* BEGIN Content Indentation */
+.indent {
+  margin-left: 3em;
+}
+/* END Content Indentation */
 

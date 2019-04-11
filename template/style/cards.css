@@ -15,10 +15,6 @@ section.flashcard {
   justify-content: center;
 }
 
-section.flashcard div.container {
-  height: 100%;
-}
-
 section.flashcard.img .light {
   color: white;
   text-shadow: 0px 5px 5px #333;
@@ -44,6 +40,7 @@ section.flashcard h1, section.flashcard h2, section.flashcard h3, section.flashc
 section.flashcard h1 {
   font-size: 60px;
   font-family: title;
+  padding: 0;
 }
 
 section.flashcard p {
@@ -96,9 +93,33 @@ section.titlecard h1, section.titlecard h2, section.titlecard h3, section.titlec
   padding: 0px;
 }
 
+section.titlecard .left * {
+  text-align: left;
+}
+
+section.titlecard .right * {
+  text-align: right;
+}
+
+section.titlecard.img .light {
+  color: white;
+  text-shadow: 0px 5px 5px #333;
+}
+
+section.titlecard.img .dark {
+  color: #333;
+  text-shadow: 0px 5px 5px #eee;
+}
+
+section.titlecard .dark {
+  color: #333;
+  /*text-shadow: 0px 5px 5px #eee;*/
+}
+
 section.titlecard h1 {
   font-size: 60px;
   font-family: title;
+  padding: 0;
 }
 
 section.titlecard p {
@@ -116,7 +137,7 @@ section.titlecard hr {
 
 /* Use Inline Styling to replace the background image */
 section.flashcard.img, section.titlecard.img {
-  background-image: url("/temp/bg1.jpg"); /* This is a Demonstration Image */
+  background-image: url("/temp/bg1.jpg"); /* This is a Demonstration Image. TODO Remove this when finalized */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -124,9 +145,31 @@ section.flashcard.img, section.titlecard.img {
   background-color: #ccc;
 }
 
+/* Background Video TODO make it act like cover using object-fit css rules or whatever */
+section.flashcard.video, section.titlecard.video {
+  background-color: black;
+  overflow: hidden;
+}
+
+section.flashcard.video video, section.titlecard.video video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: static;
+}
+
+section.flashcard.video div, section.titlecard.video div {
+  z-index: 100;
+  position: absolute;
+}
+
+/* END Background Video */
+
 section.flashcard.rainbow, section.titlecard.rainbow {
   background: rgb(255,35,15);
   background: linear-gradient(146deg, rgba(255,35,15,1) 0%, rgba(38,130,166,1) 50%, rgba(187,229,36,1) 100%);
+  color: white;
 }
 
 section.flashcard.red-orange, section.titlecard.red-orange {
@@ -150,9 +193,10 @@ section.flashcard.grayscale, section.titlecard.grayscale {
   color: white;
 }
 
-section.flashcard.monochrome, section.titlecard.monochrome {
+section.flashcard.grayscale-light, section.titlecard.grayscale-light {
   background: rgb(255,255,255);
   background: linear-gradient(96deg, rgba(255,255,255,1) 0%, rgba(159,159,159,1) 100%);
+  color: #333;
 }
 
 /* END flashcard and titlecard styling */
