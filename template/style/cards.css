@@ -199,4 +199,10 @@ section.flashcard.grayscale-light, section.titlecard.grayscale-light {
   color: #333;
 }
 
+section.flashcard.garnet, section.titlecard.garnet {
+  background: rgb(36,0,0);
+  background: linear-gradient(82deg, rgba(36,0,0,1) 0%, rgba(115,0,10,1) 35%, rgba(161,119,119,1) 100%);
+  color: white;
+}
+
 /* END flashcard and titlecard styling */
