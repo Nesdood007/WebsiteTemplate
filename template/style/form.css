@@ -22,6 +22,109 @@ fieldset legend {
   /*display: contents;*/
 }
 
+/* This looks weird when styling the border */
+fieldset select {
+  font-family: light;
+  font-size: 16px;
+}
+
+fieldset textarea {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 2.5px;
+  border-radius: 5px 5px 0px 5px;
+  border: 1px solid #ccc;
+  font-family: light;
+}
+
+fieldset textarea:focus {
+  border-color: #333;
+  box-shadow: 0px 5px 10px #666;
+}
+
+/* 2 Different ways to get a button */
+fieldset button, input[type="button"] {
+  border: 0px;
+  padding: 5px;
+  font-family: medium;
+  font-size: 16px;
+  border-radius: 5px;
+  color: white;
+  background-color: #333;
+}
+
+/* 2 Different ways to get a button */
+fieldset button:hover, input[type=button]:hover {
+  border: 0px;
+  padding: 5px;
+  font-family: medium;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #333;
+  background-color: #eee;
+}
+
+/* Reset Styling */
+fieldset input[type="reset"] {
+  border: 0px;
+  padding: 5px;
+  font-family: medium;
+  font-size: 16px;
+  border-radius: 5px;
+  color: white;
+  background-color: #FF230F;
+}
+
+/* Reset Styling */
+fieldset input[type="reset"]:hover {
+  border: 0px;
+  padding: 5px;
+  font-family: medium;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #FF230F;
+  background-color: #eee;
+}
+
+/* Submit Styling */
+fieldset input[type="submit"] {
+  border: 0px;
+  padding: 5px;
+  font-family: medium;
+  font-size: 16px;
+  border-radius: 5px;
+  color: white;
+  background-color: #2682A6;
+}
+
+/* Submit Styling */
+fieldset input[type="submit"]:hover {
+  border: 0px;
+  padding: 5px;
+  font-family: medium;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #2682A6;
+  background-color: #eee;
+}
+
+/* 2 Different ways to get a button, alternate style */
+fieldset button.hollow, input[type=button].hollow {
+  border: 2px solid #333;
+  padding: 5px;
+  font-family: medium;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #333;
+  background-color: #eee;
+}
+
+fieldset button.hollow:hover, input[type=button].hollow:hover {
+  box-shadow: inset 0px 0px 10px #aaa;
+  color: #555;
+  border-color: #555;
+}
+
 /* END Default Fieldset Format */
 
 /* For Things relating to getting info, or small forms */
@@ -62,9 +165,24 @@ form.info div.body fieldset {
   /*border-left: 5px solid rgba(0,0,0,0);*/
 }
 
+form.info div.body fieldset.required label::after {
+  content: "⏺";
+  color: #404040;
+  text-decoration: bold;
+}
+
 form.info div.body fieldset.error {
   color: black;
   border-left: 5px solid #FF230F;
+  padding-left: 5px;
+}
+
+form.info div.body fieldset.error label {
+  color: #FF230F;
+}
+
+form.info div.body fieldset.error .errors {
+  color: #FF230F;
 }
 
 form.info div.body p {
@@ -87,6 +205,16 @@ label {
 
 input {
   /*width: 100%;*/
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-family: light;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #333;
+  box-shadow: 0px 5px 10px #666;
 }
 
 input[type="text"] {
@@ -95,6 +223,13 @@ input[type="text"] {
   border-radius: 3px;
   padding: 5px;
   font-family: light;
+}
+
+input[type="color"] {
+  border: 0px;
+  padding: 0px;
+  width: 16px;
+  height: 16px;
 }
 
 
