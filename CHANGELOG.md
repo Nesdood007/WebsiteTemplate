@@ -6,6 +6,7 @@ Tracks Features added to the Website Template throughout time. These changes als
 
 ## Latest
 
+* __2019-10-07__ : Started v2.0
 * __2019-03-01__ : A Change Was Made
 
 ## Initial Release
