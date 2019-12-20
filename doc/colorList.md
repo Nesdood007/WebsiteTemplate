@@ -64,11 +64,127 @@ section.flashcard
     
 ## content.css
 
+- This file contains styling for many of the elements that are commonly used in writing a webpage
+
+main .ts
+    - @background: `white`
+    - border-left: `gray`
+    h1
+        - @color: `gray`
+    .note
+        - @background: `#F0F7D4`
+        - @border: `#BBE524`
+    .warn
+        - @background: `#fff9e6`
+        - @border: `#ffc30f`
+        h1
+            - @color: `#e6ac00`
+    .err
+        - @background: `#ffe8e6`
+        - @border: `#FF230F`
+        h1
+            - @color: `#FF230F`
+
+main pre
+    - border-left: `gray`, but overwritten by `#2682A6`
+    - @background: `#eee`
+    - color: `#2682A6`
+
+main pre code
+    - Note: This is the broken code display
+    - color: `black`
+    :before
+        - border-right: `#777`
+        - color: `#777`
+
+.time, .date, .location
+    - color: `black`
+
+.downloads
+    - border-bottom: `#333`
+
+.g_XxY
+    - @background: `white`
+    - color: `#333`
+
 ## footer.css
+
+- This file contains styling for the Footer and Copyright Bar
+
+footer
+    - @background: `#002C3D`
+    - box-shadow: `#555555`
+    - color: `gray`
+
+#footer-top
+    - @background: `#00121a`
+
+Footer-Top Link
+    - color: `white`
+    :hover
+        - color: `#111111`
+        - @background: `white`
+    .green: `#BBE524` ...
+    .red: `#FF230F` ...
+    .blue: `#2682A6` ...
+    .orange: `#fb9902`
 
 ## form.css
 
+- This file contains styling for any Form Elements
+
+fieldset
+    - @border: `#aaa`
+
+fieldset legend (Text at top of Fieldset)
+    - @background: `black`
+    - color: `white`
+
+textarea
+    - @border: `#ccc`
+    :focus
+        - @border: `#333`
+        - box-shadow: `#666`
+
+button, input[type="button"]
+    - color: `white`
+    - @background: `#333`
+    :hover
+        - color: `#333`
+        - @background: `#eee`
+
+input[type="reset"]
+    - color: `white`
+    - @background: `#FF230F`
+    :hover
+        - color: `#FF230F`
+        - @background: `#eee`
+
+input[type="submit"]
+    - @background: `#2682A6`
+    - white: `white`
+    :hover
+        - color: `#2682A6`
+        - @background: `#eee`
+
+button.hollow
+    - @border: `#333`
+    - color: `#333`
+    - @background: `#eee`
+    :hover
+        - @box-shadow: `#aaa`
+        - color: `#555`
+        - @border: `#555`
+
 ## header.css
+
+- Has the Title and the Menu Styling
+
+header
+    - box-shadow: `#555`
+    - color: `white`
+
+
 
 ## main.css
 
