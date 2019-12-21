@@ -156,7 +156,7 @@
     --light-header-bar-color: #333;
 
     --dark-header-color: white; /* Dark Color Scheme */
-    --dark-header-bar-color: #ccc;
+    --dark-header-bar-color: #aaa;
 
     --hr-color: #999;
 
@@ -172,6 +172,8 @@
     --table-row-text: black;
     --table-footer-bg: white;
     --table-footer-text: var(--accent-3);
+
+    
 }
 
 /* HTML Tags */
@@ -276,8 +278,9 @@ h1.hbar, h2.hbar, h3.hbar, h4.hbar, h5.hbar, h6.hbar {
 }
 
 .invert {
-    background-color: var(--dark-header-color);
-    color: var(--dark-background);
+    background-color: var(--light-header-color);
+    color: var(--light-background);
+    padding-left: 5px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -291,6 +294,10 @@ h1.hbar, h2.hbar, h3.hbar, h4.hbar, h5.hbar, h6.hbar {
     
     h1.hbar, h2.hbar, h3.hbar, h4.hbar, h5.hbar, h6.hbar {
         border-bottom: 1px solid var(--dark-header-bar-color);
+    }
+    .invert {
+        background-color: var(--dark-header-color);
+        color: var(--dark-background);
     }
 }
 
@@ -462,9 +469,19 @@ dl dt {
     border-color: hsl(var(--accent-1-h), var(--accent-1-s), 30%) !important;
 }
 
+.accent-1.invert {
+    background-color: var(--accent-1);
+    color: var(--light-background);
+}
+
 .accent-2 {
     color: var(--accent-2);
     border-color: hsl(var(--accent-2-h), var(--accent-2-s), 30%) !important;
+}
+
+.accent-2.invert {
+    background-color: var(--accent-2);
+    color: var(--light-background);
 }
 
 .accent-3 {
@@ -472,9 +489,19 @@ dl dt {
     border-color: hsl(var(--accent-3-h), var(--accent-3-s), 30%) !important;
 }
 
+.accent-3.invert {
+    background-color: var(--accent-3);
+    color: var(--light-background);
+}
+
 .accent-4 {
     color: var(--accent-4);
     border-color: hsl(var(--accent-4-h), var(--accent-4-s), 30%) !important;
+}
+
+.accent-4.invert {
+    background-color: var(--accent-4);
+    color: var(--light-background);
 }
 
 
