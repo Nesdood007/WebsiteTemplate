@@ -173,6 +173,12 @@
     --table-footer-bg: white;
     --table-footer-text: var(--accent-3);
 
+    /* Other Tags */
+    /* @TODO Finish This */
+    --blockquote-bar-color: #555;
+    --blockquote-bg-color: #eee;
+    --blockquote-text-color: black;
+
     
 }
 
@@ -186,7 +192,7 @@ body {
 
 
 
-@media (prefers-color-scheme: dark) {
+@media only screen and (prefers-color-scheme: dark) {
     body {
         background-color: var(--dark-background);
         color: var(--dark-text-color);
@@ -216,6 +222,23 @@ main.sidebar {
     .container {
         margin: 0% 1%;
         width: 98%;
+    }
+}
+
+/* Specific Printing Rules */
+@media only print {
+    .container {
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    hr {
+        background-color: #aaa;
+    }
+
+    .hide-for-print {
+        display: none !important;
     }
 }
 
@@ -278,12 +301,18 @@ h1.hbar, h2.hbar, h3.hbar, h4.hbar, h5.hbar, h6.hbar {
 }
 
 .invert {
-    background-color: var(--light-header-color);
-    color: var(--light-background);
     padding-left: 5px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Don't Invert Colors when Printing */
+@media only screen {
+    .invert {
+        background-color: var(--light-header-color);
+        color: var(--light-background);
+    }
+}
+
+@media only screen and (prefers-color-scheme: dark) {
     h1, h2, h3, h4, h5, h6 {
         color: var(--dark-header-color);
     }
@@ -469,19 +498,9 @@ dl dt {
     border-color: hsl(var(--accent-1-h), var(--accent-1-s), 30%) !important;
 }
 
-.accent-1.invert {
-    background-color: var(--accent-1);
-    color: var(--light-background);
-}
-
 .accent-2 {
     color: var(--accent-2);
     border-color: hsl(var(--accent-2-h), var(--accent-2-s), 30%) !important;
-}
-
-.accent-2.invert {
-    background-color: var(--accent-2);
-    color: var(--light-background);
 }
 
 .accent-3 {
@@ -489,19 +508,49 @@ dl dt {
     border-color: hsl(var(--accent-3-h), var(--accent-3-s), 30%) !important;
 }
 
-.accent-3.invert {
-    background-color: var(--accent-3);
-    color: var(--light-background);
-}
-
 .accent-4 {
     color: var(--accent-4);
     border-color: hsl(var(--accent-4-h), var(--accent-4-s), 30%) !important;
 }
 
-.accent-4.invert {
-    background-color: var(--accent-4);
-    color: var(--light-background);
+/* Don't invert colors when printing */
+@media only screen {
+    .accent-1.invert {
+        background-color: var(--accent-1);
+        color: var(--light-background);
+    }
+    .accent-2.invert {
+        background-color: var(--accent-2);
+        color: var(--light-background);
+    }
+    .accent-3.invert {
+        background-color: var(--accent-3);
+        color: var(--light-background);
+    }
+    .accent-4.invert {
+        background-color: var(--accent-4);
+        color: var(--light-background);
+    }
+}
+
+/* Dark Color Scheme Inversions */
+@media only screen and (prefers-color-scheme: dark) {
+    .accent-1.invert {
+        background-color: var(--accent-1);
+        color: var(--dark-background);
+    }
+    .accent-2.invert {
+        background-color: var(--accent-2);
+        color: var(--dark-background);
+    }
+    .accent-3.invert {
+        background-color: var(--accent-3);
+        color: var(--dark-background);
+    }
+    .accent-4.invert {
+        background-color: var(--accent-4);
+        color: var(--dark-background);
+    }
 }
 
 
