@@ -1,0 +1,33 @@
+/*
+    Styling for Link Buttons
+
+    Usage:
+    <a href="#" class="button">Link</a>
+*/
+
+a.button {
+    border-radius: 5px;
+    border: 0;
+    background-color: #333;
+    color: #eee;
+    padding: 7px;
+    font-family: semibold;
+    text-align: center;
+    display: inline-block;
+}
+
+a.button.accent-1 {
+    background-color: var(--accent-1);
+    color: #eee;
+}
+
+a.button.accent-1:hover, a.button.accent-1:active {
+    background-color: #eee;
+    color: var(--accent-1);
+}
+
+a.button:hover, a.button:active {
+    background-color: #eee;
+    color: #333;
+}
+

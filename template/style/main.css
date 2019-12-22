@@ -85,6 +85,7 @@
     
     /* Other Colors, not in scheme */
     --usc-garnet: #73000a;
+    --acm-blue: #0492d2;
 
     /* Greys */
     --grey-1: #111;
@@ -557,115 +558,11 @@ dl dt {
     }
 }
 
-
 /* END Explicit Color Assignment Classes */
 
-
-/* ======MOVE OUT====== */
-
-/* @TODO Move these Styling Rules out into different Files or delete them */
-
-a.button {
-    border-radius: 5px;
-    border: 0;
-    background-color: #333;
-    color: #eee;
-    padding: 7px;
-    font-family: semibold;
-    text-align: center;
-    display: inline-block;
-}
-
-a.button.garnet {
-    background-color: #73000a;
-    color: #eee;
-}
-
-a.button.acm-blue {
-    background-color: #0492d2;
-    color: #eee;
-}
-
-a.button.garnet:hover, a.button.garnet:active {
-    background-color: #eee;
-    color: #73000a;
-}
-
-a.button.acm-blue:hover, a.button.acm-blue:active {
-    background-color: #eee;
-    color: #0492d2;
-}
-
-a.button:hover, a.button:active {
-    background-color: #eee;
-    color: #333;
-}
-
-/* This is the Navigator Bar */
-main nav {
-    background-color: #111111;
-    color: white;
-    margin: 0px;
-    padding: 5px 0px;
-}
-
-main nav span {
-    font-family: semibold;
-    font-size: 24px;
-    display: block;
-    float: left;
-    padding: 1px 10px 1px 1px;
-}
-
-main nav ul {
-    list-style-type: none;
-    display: inline;
-    margin: 0px;
-}
-
-main nav ul li {
-    padding: 1px 15px 1px 0px;
-    font-family: semibold;
-    color: gray;
-    display: inline-block;
-}
-
-main nav ul li * {
-    margin: 5px 0px;
-    padding: 0px;
-}
-
-/* May change the Link color at some point */
-main nav ul li a:link, main nav ul li a:visited {
-    color: #BBE524;
-    text-decoration: none;
-    
-}
-
-main nav ul li a:hover {
-    color: white;
-    text-decoration: none;
-}
-
-/* This is legacy. Use a Titlecard */
-main .title {
-    margin: 0px;
-    padding: 0px;
-    font-size: 4rem;
-    border-left: 0px;
-    font-family: bold;
-}
-
-/* Details Tag */
 details {
-    /*border-left: 5px solid black;*/
     background-color: rgba(0,0,0,1);
     font-family: semibold;
-}
-
-/* Removes the Twisty Triangle. Only works in Chrome */
-details summary::-webkit-details-marker {
-    display: none;
 }
 
 summary {
@@ -687,32 +584,25 @@ details[open] summary {
     color: white;
 }
 
-/* END Details Tag */
-
-
-abbr {
-    border-bottom: 2.5px solid #333;
-}
-
-main figure {
+figure {
     margin: 5px 0px;
     padding: 0px;
     background-color: #002C3D;
     color: white;
 }
 
-main figure .figure {
+figure .figure {
     color: gray;
 }
 
-main figure figcaption {
+figure figcaption {
     margin: 0px;
     padding: 5px 5px 5px 20px;
     font-family: ultralight;
     border-left: 5px solid #004966;
 }
 
-main figure.white {
+figure.white {
     background-color: white;
     color: #333;
     font-family: bold;
@@ -720,10 +610,15 @@ main figure.white {
     margin: 0;
 }
 
-main figure.white figcaption {
+figure.white figcaption {
     color: #333;
     font-family: bold;
     border-left: 0;
     text-align: center;
     padding: 0;
 }
+
+/* ======MOVE OUT====== */
+
+/* @TODO Move these Styling Rules out into different Files or delete them */
+
