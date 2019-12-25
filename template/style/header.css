@@ -1,4 +1,7 @@
 /* Styling for Header and Title */
+
+/* @TODO Turn the <header> into a class */
+
 /* Header Block: Title and Menu */
 header {
   box-shadow: 0px 5px 10px #555;

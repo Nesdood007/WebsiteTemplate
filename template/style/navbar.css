@@ -9,14 +9,16 @@
         </nav>
 */
 
-main nav {
+/* @TODO Reimplement this in a cleaner way */
+
+nav {
     background-color: #111111;
     color: white;
     margin: 0px;
     padding: 5px 0px;
 }
 
-main nav span {
+nav span {
     font-family: semibold;
     font-size: 24px;
     display: block;
@@ -24,32 +26,32 @@ main nav span {
     padding: 1px 10px 1px 1px;
 }
 
-main nav ul {
+nav ul {
     list-style-type: none;
     display: inline;
     margin: 0px;
 }
 
-main nav ul li {
+nav ul li {
     padding: 1px 15px 1px 0px;
     font-family: semibold;
     color: gray;
     display: inline-block;
 }
 
-main nav ul li * {
+nav ul li * {
     margin: 5px 0px;
     padding: 0px;
 }
 
 /* May change the Link color at some point */
-main nav ul li a:link, main nav ul li a:visited {
+nav ul li a:link, nav ul li a:visited {
     color: #BBE524;
     text-decoration: none;
     
 }
 
-main nav ul li a:hover {
+nav ul li a:hover {
     color: white;
     text-decoration: none;
 }

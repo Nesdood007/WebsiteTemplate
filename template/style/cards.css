@@ -1,134 +1,164 @@
 /* Contains Styling used on Titlecards and Flashcards */
 
-/* Start Section-Specific Segments or Flashcards */
+/* 
+    Cards Documentation:
 
-section.flashcard {
-  min-height: 100vh;
-  background: #111;
-  /*background: linear-gradient(146deg, rgba(255,35,15,1) 0%, rgba(38,130,166,1) 50%, rgba(187,229,36,1) 100%);*/
-  background-attachment: fixed;
-  color: white; /* Default to Light */
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
+    Please note that Cards DO NOT CHANGE depending on the user's Dark Mode Preference. Any CSS Vars that mention Dark and Light are for setting the text classes of .light and .dark, as well as the default. Dark and Light here refer to the colors that the text will use (If the background is dark, then it may be a good idea to use the light class)
 
-section.flashcard.img .light {
-  color: white;
-  text-shadow: 0px 5px 5px #333;
-}
+*/
 
-section.flashcard.img .dark {
-  color: #333;
-  text-shadow: 0px 5px 5px #eee;
-}
+/* @TODO use CSS Vars */
 
-section.flashcard .dark {
-  color: #333;
-  /*text-shadow: 0px 5px 5px #eee;*/
-}
+/* These CSS Vars pertain only to Cards. */
+:root {
+    /* Default Background Color */
+    
+    --cards-backdrop-color: rgba(0, 0, 0, 0.5);
+    
+    /* Light and Dark here refer to the Text Content Classes, not the User's Dark Mode Preference */
+    --cards-default-bg-light: var(--dark-background, #111);
+    --cards-default-bg-dark: var(--light-background, white);
+    --cards-default-text-light: white;
+    --cards-default-text-light-shadow: #333;
+    --cards-default-text-dark: #333;
+    --cards-default-text-dark-shadow: black;
 
-section.flashcard h1, section.flashcard h2, section.flashcard h3, section.flashcard h4, section.flashcard h5, section.flashcard h6, section.flashcard p, section.flashcard a {
-  margin: auto;
-  text-align: center;
-  border: 0px;
-  /*padding: 0px;*/
-}
-
-section.flashcard h1 {
-  font-size: 60px;
-  font-family: title;
-  padding: 0;
-}
-
-section.flashcard p {
-  font-size: 20px;
-  font-family: semibold;
+    --cards-hr-color-light: white;
+    --cards-hr-color-dark: #333;
 }
 
 /* Left/Right Container */
-div.lr-container {
-  height: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: stretch;
+.lr-container {
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
 }
 
-div.lr-container > div {
-  width: 50%;
+.lr-container > * {
+    width: 50%;
 }
 
-div.backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+.backdrop {
+    background-color: var(--cards-backdrop-color);
 }
 
-section.flashcard hr {
-  border-color: white;
+/* Start Section-Specific Segments or Flashcards */
+.flashcard {
+    min-height: 100vh;
+    background: var(--cards-default-bg-light);
+    background-attachment: fixed;
+    color: var(--cards-default-text-light); /* Default to Light */
+    border-color: var(--cards-hr-color-light);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
+.flashcard *, .flashcard.light * {
+    color: var(--cards-default-text-light);
+    border-color: var(--cards-hr-color-light);
+}
+
+.flashcard.dark {
+    background: var(--cards-default-bg-dark);
+    color: var(--cards-default-text-dark);
+    border-color: var(--cards-hr-color-dark);
+}
+
+.flashcard.dark * {
+    color: var(--cards-default-text-dark);
+    border-color: var(--cards-hr-color-dark);
+}
+
+.flashcard.light.shadow *, .flashcard.img * {
+    color: var(--cards-default-text-light);
+    text-shadow: 0px 5px 5px var(--cards-default-text-light-shadow);
+}
+
+.flashcard.dark.shadow *, .flashcard.dark.img * {
+    color: var(--cards-default-text-dark);
+    text-shadow: 0px 5px 5px var(--cards-default-text-dark-shadow);
+}
+
+.flashcard *:not(hr) {
+    margin: auto;
+    text-align: center;
+    border: 0px;
+}
+
+.flashcard h1 {
+    font-size: 60px;
+    font-family: title;
+    padding: 0;
+}
+
+.flashcard p {
+    font-size: 32px;
+    font-family: semibold;
+}
 /* END Flashcards */
 
 /* START TitleCards */
-
-section.titlecard {
-  min-height: 50vh;
-  background-color: white; /* Default to Light */
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  color: #111;
+.titlecard {
+    min-height: 50vh;
+    background: var(--cards-default-bg-light);
+    background-attachment: fixed;
+    color: var(--cards-default-text-light); /* Default to Light */
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-section.titlecard h1, section.titlecard h2, section.titlecard h3, section.titlecard h4, section.titlecard h5, section.titlecard h6, section.titlecard p, section.titlecard a {
-  margin: auto;
-  text-align: center;
-  border: 0px;
-  padding: 0px;
+.titlecard *, .titlecard.light * {
+    color: var(--cards-default-text-light);
+    border-color: var(--cards-hr-color-light);
 }
 
-section.titlecard .left * {
-  text-align: left;
+.titlecard.dark {
+    background: var(--cards-default-bg-dark);
+    color: var(--cards-default-text-dark);
+    border-color: var(--cards-hr-color-dark);
 }
 
-section.titlecard .right * {
-  text-align: right;
+.titlecard.dark * {
+    color: var(--cards-default-text-dark);
+    border-color: var(--cards-hr-color-dark);
 }
 
-section.titlecard.img .light {
-  color: white;
-  text-shadow: 0px 5px 5px #333;
+.titlecard.light.shadow *, .titlecard.img * {
+    color: var(--cards-default-text-light);
+    text-shadow: 0px 5px 5px var(--cards-default-text-light-shadow);
 }
 
-section.titlecard.img .dark {
-  color: #333;
-  text-shadow: 0px 5px 5px #eee;
+.titlecard.dark.shadow *, .titlecard.dark.img * {
+    color: var(--cards-default-text-dark);
+    text-shadow: 0px 5px 5px var(--cards-default-text-dark-shadow);
 }
 
-section.titlecard .dark {
-  color: #333;
-  /*text-shadow: 0px 5px 5px #eee;*/
+.titlecard *:not(hr) {
+    margin: auto;
+    text-align: center;
+    border: 0px;
 }
 
-section.titlecard h1 {
-  font-size: 60px;
-  font-family: title;
-  padding: 0;
+.titlecard h1 {
+    font-size: 60px;
+    font-family: title;
+    padding: 0;
 }
 
-section.titlecard p {
-  font-size: 20px;
-  font-family: semibold;
-}
-
-section.titlecard hr {
-  border-color: white;
+.titlecard p {
+    font-size: 32px;
+    font-family: semibold;
 }
 
 /* END TitleCards */
@@ -136,88 +166,88 @@ section.titlecard hr {
 /* START flashcard and titlecard styling */
 
 /* Use Inline Styling to replace the background image */
-section.flashcard.img, section.titlecard.img {
-  background-image: url("/temp/bg1.jpg"); /* This is a Demonstration Image. TODO Remove this when finalized */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-color: #ccc;
+.flashcard.img, .titlecard.img {
+    background-image: url("/temp/bg1.jpg"); /* This is a Demonstration Image. TODO Remove this when finalized */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #ccc;
 }
 
 /* Background Video TODO make it act like cover using object-fit css rules or whatever */
-section.flashcard.video, section.titlecard.video {
-  background-color: black;
-  overflow: hidden;
+.flashcard.video, .titlecard.video {
+    background-color: black;
+    overflow: hidden;
 }
 
-section.flashcard.video video, section.titlecard.video video {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  position: static;
+.flashcard.video video, .titlecard.video video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: static;
 }
 
-section.flashcard.video div, section.titlecard.video div {
-  z-index: 100;
-  position: absolute;
+.flashcard.video div, .titlecard.video div {
+    z-index: 100;
+    position: absolute;
 }
 
 /* END Background Video */
 
-section.flashcard.rainbow, section.titlecard.rainbow {
-  background: rgb(255,35,15);
-  background: linear-gradient(146deg, rgba(255,35,15,1) 0%, rgba(38,130,166,1) 50%, rgba(187,229,36,1) 100%);
-  color: white !important;
+.flashcard.rainbow, .titlecard.rainbow {
+    background: rgb(255,35,15);
+    background: linear-gradient(146deg, rgba(255,35,15,1) 0%, rgba(38,130,166,1) 50%, rgba(187,229,36,1) 100%);
+    color: white !important;
 }
 
 .flashcard.rainbow *, .titlecard.rainbow *{
-  color: white;
+    color: white;
 }
 
-section.flashcard.red-orange, section.titlecard.red-orange {
-  background: rgb(255,81,0);
-  background: linear-gradient(45deg, rgba(255,81,0,1) 0%, rgba(255,35,15,1) 100%);
-  background-attachment: fixed;
+.flashcard.red-orange, .titlecard.red-orange {
+    background: rgb(255,81,0);
+    background: linear-gradient(45deg, rgba(255,81,0,1) 0%, rgba(255,35,15,1) 100%);
+    background-attachment: fixed;
 }
 
 .flashcard.titlecard.red-orange *, .titlecard.titlecard.red-orange *{
-  color: white;
+    color: white;
 }
 
-section.flashcard.blue-green, section.titlecard.blue-green {
-  background: rgb(187,229,36);
-  background: linear-gradient(45deg, rgba(187,229,36,1) 0%, rgba(38,130,166,1) 100%);
-  background-attachment: fixed;
+.flashcard.blue-green, .titlecard.blue-green {
+    background: rgb(187,229,36);
+    background: linear-gradient(45deg, rgba(187,229,36,1) 0%, rgba(38,130,166,1) 100%);
+    background-attachment: fixed;
 }
 
 .flashcard.blue-green *, .titlecard.blue-green *{
-  color: white;
+    color: white;
 }
 
-section.flashcard.grayscale, section.titlecard.grayscale {
-  background: rgb(51,51,68);
-  background: linear-gradient(66deg, rgba(51,51,68,1) 0%, rgba(153,153,170,1) 100%);
-  background-attachment: fixed;
+.flashcard.grayscale, .titlecard.grayscale {
+    background: rgb(51,51,68);
+    background: linear-gradient(66deg, rgba(51,51,68,1) 0%, rgba(153,153,170,1) 100%);
+    background-attachment: fixed;
 }
 
 .flashcard.grayscale *, .titlecard.grayscale *{
-  color: white;
+    color: white;
 }
 
-section.flashcard.grayscale-light, section.titlecard.grayscale-light {
-  background: rgb(255,255,255);
-  background: linear-gradient(96deg, rgba(255,255,255,1) 0%, rgba(159,159,159,1) 100%);
+.flashcard.grayscale-light, .titlecard.grayscale-light {
+    background: rgb(255,255,255);
+    background: linear-gradient(96deg, rgba(255,255,255,1) 0%, rgba(159,159,159,1) 100%);
 }
 
 .flashcard.grayscale-light *, .titlecard.grayscale-light *{
-  color: #333;
+    color: #333;
 }
 
-section.flashcard.garnet, section.titlecard.garnet {
-  background: rgb(36,0,0);
-  background: linear-gradient(82deg, rgba(36,0,0,1) 0%, rgba(115,0,10,1) 35%, rgba(161,119,119,1) 100%);
+.flashcard.garnet, .titlecard.garnet {
+    background: rgb(36,0,0);
+    background: linear-gradient(82deg, rgba(36,0,0,1) 0%, rgba(115,0,10,1) 35%, rgba(161,119,119,1) 100%);
 }
 
 /* END flashcard and titlecard styling */
