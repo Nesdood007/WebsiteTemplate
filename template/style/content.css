@@ -3,44 +3,45 @@
 /* @TODO Use Color CSS Vars and Fix Downloads Text, etc. */
 
 /* Text Sections */
-div.ts {
+.ts {
   background-color: white;
   border-left: 5px solid gray;
   margin: 5px 0px;
   padding: 0.5em 0.5em 0.5em 1em; 
 }
 
-div.ts p {
+.ts p {
   margin: 0px;
+  color: black;
 }
 
-div.ts h1 {
+.ts h1 {
   border-left: 0px;
   color: gray;
   padding: 0;
   margin: 0 0 10px 0;
 }
 
-div.ts.note {
+.ts.note {
   background-color: #F0F7D4;
   border-color: #BBE524;
 }
 
-div.ts.warn {
+.ts.warn {
   background-color: #fff9e6;
   border-color: #ffc30f;
 }
 
-div.ts.warn h1 {
+.ts.warn h1 {
   color: #e6ac00;
 }
 
-div.ts.err {
+.ts.err {
   background-color: #ffe8e6;
   border-color: #FF230F;
 }
 
-div.ts.err h1 {
+.ts.err h1 {
   color: #FF230F;
 }
 /* END Text Sections */

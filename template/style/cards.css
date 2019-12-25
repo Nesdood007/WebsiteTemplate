@@ -172,7 +172,7 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    background-color: #ccc;
+    background-color: var(--cards-default-bg-light);
 }
 
 /* Background Video TODO make it act like cover using object-fit css rules or whatever */
@@ -195,6 +195,8 @@
 }
 
 /* END Background Video */
+
+/* =====OLD STYLING===== */
 
 .flashcard.rainbow, .titlecard.rainbow {
     background: rgb(255,35,15);
@@ -250,4 +252,36 @@
     background: linear-gradient(82deg, rgba(36,0,0,1) 0%, rgba(115,0,10,1) 35%, rgba(161,119,119,1) 100%);
 }
 
-/* END flashcard and titlecard styling */
+/* END old flashcard and titlecard styling */
+
+/**** New Card Styling ****/
+
+.flashcard.black-and-white, .titlecard.black-and-white {
+    background: black;
+}
+.flashcard.black-and-white *, .titlecard.black-and-white * {
+    color: white;
+    border-color: white;
+}
+
+.flashcard.dark-and-light, .titlecard.dark-and-light {
+    background: var(--dark-color);
+}
+.flashcard.dark-and-light *, .titlecard.dark-and-light * {
+    color: var(--light-color);
+    border-color: var(--light-color);
+}
+
+.flashcard.stripes, .titlecard.stripes {
+    background: var(--dark-color);
+    background: linear-gradient(-45deg, var(--dark-color) 0% 40%, var(--accent-1) 40% 44%, var(--dark-color) 44% 48%, var(--accent-2) 48% 52%, var(--dark-color) 52% 56%, var(--accent-3) 56% 60%, var(--dark-color) 60% 100%);
+}
+
+/* Testing Text Gradients */
+.flashcard.text-test-gradient *, .flashcard.text-test-gradient * {
+    color: transparent;
+    background: linear-gradient(82deg, rgba(36,0,0,1) 0%, rgba(115,0,10,1) 35%, rgba(161,119,119,1) 100%);
+    /* It's important that these are last */
+    background-clip: text; /* Firefox */
+    -webkit-background-clip: text; /* For Chrome, and others */
+}
