@@ -272,16 +272,216 @@
     border-color: var(--light-color);
 }
 
-.flashcard.stripes, .titlecard.stripes {
+/*** Background Styling Only (classes are prefaced by 'bg-') ***/
+
+.flashcard.bg-stripes, .titlecard.bg-stripes {
     background: var(--dark-color);
     background: linear-gradient(-45deg, var(--dark-color) 0% 40%, var(--accent-1) 40% 44%, var(--dark-color) 44% 48%, var(--accent-2) 48% 52%, var(--dark-color) 52% 56%, var(--accent-3) 56% 60%, var(--dark-color) 60% 100%);
+    background-attachment: fixed;
 }
 
+.flashcard.bg-a1-a2, .flashcard.bg-a1-a2 {
+    background: var(--accent-1);
+    background: linear-gradient(45deg, var(--accent-1) 0%, var(--accent-2) 100%);
+    background-attachment: fixed;
+}
+
+.flashcard.bg-a1-a3, .flashcard.bg-a1-a3 {
+    background: var(--accent-1);
+    background: linear-gradient(45deg, var(--accent-1) 0%, var(--accent-3) 100%);
+    background-attachment: fixed;
+}
+
+.flashcard.bg-a1-a4, .flashcard.bg-a1-a4 {
+    background: var(--accent-1);
+    background: linear-gradient(45deg, var(--accent-1) 0%, var(--accent-4) 100%);
+    background-attachment: fixed;
+}
+
+.flashcard.bg-a2-a3, .flashcard.bg-a2-a3 {
+    background: var(--accent-2);
+    background: linear-gradient(45deg, var(--accent-2) 0%, var(--accent-3) 100%);
+    background-attachment: fixed;
+}
+
+.flashcard.bg-a2-a4, .flashcard.bg-a2-a4 {
+    background: var(--accent-2);
+    background: linear-gradient(45deg, var(--accent-2) 0%, var(--accent-4) 100%);
+    background-attachment: fixed;
+}
+
+.flashcard.bg-a3-a4, .flashcard.bg-a3-a4 {
+    background: var(--accent-3);
+    background: linear-gradient(45deg, var(--accent-3) 0%, var(--accent-4) 100%);
+    background-attachment: fixed;
+}
+
+.flashcard.bg-a1-gradient, .flashcard.bg-a1-gradient {
+    background: var(--accent-1);
+    background: linear-gradient(103deg, hsl(var(--accent-1-h), var(--accent-1-s), 30%) 0%, hsl(var(--accent-1-h), var(--accent-1-s), var(--accent-1-l)) 100%);
+    background-attachment: fixed;
+}
+
+.flashcard.bg-a2-gradient, .flashcard.bg-a2-gradient {
+    background: var(--accent-2);
+    background: linear-gradient(103deg, hsl(var(--accent-2-h), var(--accent-2-s), 30%) 0%, hsl(var(--accent-2-h), var(--accent-2-s), var(--accent-2-l)) 100%);
+    background-attachment: fixed;
+}
+
+.flashcard.bg-a3-gradient, .flashcard.bg-a3-gradient {
+    background: var(--accent-3);
+    background: linear-gradient(103deg, hsl(var(--accent-3-h), var(--accent-3-s), 30%) 0%, hsl(var(--accent-3-h), var(--accent-3-s), var(--accent-3-l)) 100%);
+    background-attachment: fixed;
+}
+
+.flashcard.bg-a4-gradient, .flashcard.bg-a4-gradient {
+    background: var(--accent-4);
+    background: linear-gradient(103deg, hsl(var(--accent-4-h), var(--accent-4-s), 30%) 0%, hsl(var(--accent-4-h), var(--accent-4-s), var(--accent-4-l)) 100%);
+    background-attachment: fixed;
+}
+
+.flashcard.bg-a1, .flashcard.bg-a1 {
+    background: var(--accent-1);
+}
+
+.flashcard.bg-a2, .flashcard.bg-a2 {
+    background: var(--accent-2);
+}
+
+.flashcard.bg-a3, .flashcard.bg-a3 {
+    background: var(--accent-3);
+}
+
+.flashcard.bg-a4, .flashcard.bg-a4 {
+    background: var(--accent-4);
+}
+
+.flashcard.bg-black, .flashcard.bg-black {
+    background: black;
+}
+
+.flashcard.bg-white, .flashcard.bg-white {
+    background: white;
+}
+
+/*** Foreground Styling Only (classes are prefaced by 'fg-')  ***/
+
 /* Testing Text Gradients */
-.flashcard.text-test-gradient *, .flashcard.text-test-gradient * {
+.flashcard.fg-test-gradient *, .flashcard.fg-test-gradient * {
     color: transparent;
     background: linear-gradient(82deg, rgba(36,0,0,1) 0%, rgba(115,0,10,1) 35%, rgba(161,119,119,1) 100%);
+    border-image: linear-gradient(82deg, rgba(36,0,0,1) 0%, rgba(115,0,10,1) 35%, rgba(161,119,119,1) 100%) 1;
     /* It's important that these are last */
     background-clip: text; /* Firefox */
     -webkit-background-clip: text; /* For Chrome, and others */
+}
+
+.flashcard.fg-a1-a2 *, .flashcard.fg-a1-a2 * {
+    color: transparent;
+    background: var(--accent-1);
+    background: linear-gradient(45deg, var(--accent-1) 0%, var(--accent-2) 100%);
+    border-image: linear-gradient(45deg, var(--accent-1) 0%, var(--accent-2) 100%) 1;
+    background-clip: text; /* Firefox */
+    -webkit-background-clip: text; /* For Chrome, and others */
+}
+
+.flashcard.fg-a1-a3 *, .flashcard.fg-a1-a3 * {
+    color: transparent;
+    background: var(--accent-1);
+    background: linear-gradient(45deg, var(--accent-1) 0%, var(--accent-3) 100%);
+    border-image: linear-gradient(45deg, var(--accent-1) 0%, var(--accent-3) 100%) 1;
+    background-clip: text; /* Firefox */
+    -webkit-background-clip: text; /* For Chrome, and others */
+}
+
+.flashcard.fg-a1-a4 *, .flashcard.fg-a1-a4 * {
+    color: transparent;
+    background: var(--accent-1);
+    background: linear-gradient(45deg, var(--accent-1) 0%, var(--accent-4) 100%);
+    border-image: linear-gradient(45deg, var(--accent-1) 0%, var(--accent-4) 100%) 1;
+    background-clip: text; /* Firefox */
+    -webkit-background-clip: text; /* For Chrome, and others */
+}
+
+.flashcard.fg-a2-a3 *, .flashcard.fg-a2-a3 * {
+    color: transparent;
+    background: var(--accent-2);
+    background: linear-gradient(45deg, var(--accent-2) 0%, var(--accent-3) 100%);
+    border-image: linear-gradient(45deg, var(--accent-2) 0%, var(--accent-3) 100%) 1;
+    background-clip: text; /* Firefox */
+    -webkit-background-clip: text; /* For Chrome, and others */
+}
+
+.flashcard.fg-a2-a4 *, .flashcard.fg-a2-a4 * {
+    color: transparent;
+    background: var(--accent-2);
+    background: linear-gradient(45deg, var(--accent-2) 0%, var(--accent-4) 100%);
+    border-image: linear-gradient(45deg, var(--accent-2) 0%, var(--accent-4) 100%) 1;
+    background-clip: text; /* Firefox */
+    -webkit-background-clip: text; /* For Chrome, and others */
+}
+
+.flashcard.fg-a3-a4 *, .flashcard.fg-a3-a4 * {
+    color: transparent;
+    background: var(--accent-3);
+    background: linear-gradient(45deg, var(--accent-3) 0%, var(--accent-4) 100%);
+    border-image: linear-gradient(45deg, var(--accent-3) 0%, var(--accent-4) 100%) 1;
+    background-clip: text; /* Firefox */
+    -webkit-background-clip: text; /* For Chrome, and others */
+}
+
+.flashcard.fg-a1-gradient *, .flashcard.fg-a1-gradient * {
+    color: transparent;
+    background: var(--accent-1);
+    background: linear-gradient(103deg, hsl(var(--accent-1-h), var(--accent-1-s), 30%) 0%, hsl(var(--accent-1-h), var(--accent-1-s), var(--accent-1-l)) 100%);
+    border-image: linear-gradient(103deg, hsl(var(--accent-1-h), var(--accent-1-s), 30%) 0%, hsl(var(--accent-1-h), var(--accent-1-s), var(--accent-1-l)) 100%) 1;
+    background-clip: text; /* Firefox */
+    -webkit-background-clip: text; /* For Chrome, and others */
+}
+
+.flashcard.fg-a2-gradient *, .flashcard.fg-a2-gradient * {
+    color: transparent;
+    background: var(--accent-2);
+    background: linear-gradient(103deg, hsl(var(--accent-2-h), var(--accent-2-s), 30%) 0%, hsl(var(--accent-2-h), var(--accent-2-s), var(--accent-2-l)) 100%);
+    border-image: linear-gradient(103deg, hsl(var(--accent-2-h), var(--accent-2-s), 30%) 0%, hsl(var(--accent-2-h), var(--accent-2-s), var(--accent-2-l)) 100%) 1;
+    background-clip: text; /* Firefox */
+    -webkit-background-clip: text; /* For Chrome, and others */
+}
+
+.flashcard.fg-a3-gradient *, .flashcard.fg-a3-gradient * {
+    color: transparent;
+    background: var(--accent-3);
+    background: linear-gradient(103deg, hsl(var(--accent-3-h), var(--accent-3-s), 30%) 0%, hsl(var(--accent-3-h), var(--accent-3-s), var(--accent-3-l)) 100%);
+    border-image: linear-gradient(103deg, hsl(var(--accent-3-h), var(--accent-3-s), 30%) 0%, hsl(var(--accent-3-h), var(--accent-3-s), var(--accent-3-l)) 100%) 1;
+    background-clip: text; /* Firefox */
+    -webkit-background-clip: text; /* For Chrome, and others */
+}
+
+.flashcard.fg-a4-gradient *, .flashcard.fg-a4-gradient * {
+    color: transparent;
+    background: var(--accent-4);
+    background: linear-gradient(103deg, hsl(var(--accent-4-h), var(--accent-4-s), 30%) 0%, hsl(var(--accent-4-h), var(--accent-4-s), var(--accent-4-l)) 100%);
+    border-image: linear-gradient(103deg, hsl(var(--accent-4-h), var(--accent-4-s), 30%) 0%, hsl(var(--accent-4-h), var(--accent-4-s), var(--accent-4-l)) 100%) 1;
+    background-clip: text; /* Firefox */
+    -webkit-background-clip: text; /* For Chrome, and others */
+}
+
+.flashcard.fg-a1 *, .flashcard.fg-a1 * {
+    color: var(--accent-1);
+    border-color: var(--accent-1);
+}
+
+.flashcard.fg-a2 *, .flashcard.fg-a2 * {
+    color: var(--accent-2);
+    border-color: var(--accent-2);
+}
+
+.flashcard.fg-a3 *, .flashcard.fg-a3 * {
+    color: var(--accent-3);
+    border-color: var(--accent-3);
+}
+
+.flashcard.fg-a4 *, .flashcard.fg-a4 * {
+    color: var(--accent-4);
+    border-color: var(--accent-4);
 }
