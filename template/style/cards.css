@@ -99,7 +99,7 @@
 }
 
 .flashcard p {
-    font-size: 32px;
+    font-size: 24px;
     font-family: semibold;
 }
 /* END Flashcards */
@@ -157,7 +157,7 @@
 }
 
 .titlecard p {
-    font-size: 32px;
+    font-size: 24px;
     font-family: semibold;
 }
 
@@ -182,11 +182,13 @@
 }
 
 .flashcard.video video, .titlecard.video video {
-    min-width: 100%;
-    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     width: auto;
     height: auto;
     position: static;
+    object-fit: contain;
+    object-position: 50% 50%;
 }
 
 .flashcard.video div, .titlecard.video div {

@@ -13,6 +13,7 @@
  */
 
 /* Fonts */
+
 @font-face {
     font-family: title;
     src: url('/font/LeagueMono-ExtraBold.woff2');
@@ -56,7 +57,6 @@
 /* Color Variables */
 
 :root {
-
     /* ===Default Color Vars=== */
     /* These are the Default Colors Provided and used in the Template. They are here for backwards compatibility */
     --off-white: #F0F7D4;
@@ -64,39 +64,31 @@
     --red: #FF230F;
     --blue: #2682A6;
     --orange: #fb9902;
-    
     --dark-blue: #002C3D;
     --light-blue: #004966;
-
     /* For Warning Boxes */
     --warn-yellow: #ffc30f;
     --warn-bright-yellow: #fff9e6;
     --warn-red: #ffd0cc;
-    
     /* For Tags */
     --faint-green: #dcf28d;
     --faint-red: #ff8a80;
     --faint-blue: #97d1e7;
     --faint-orange: #fecc81;
-    
     /* For Link Selection */
     --lighter-blue: #82c7e3;
     --lighter-green: #ceec5f;
-    
     /* Other Colors, not in scheme */
     --usc-garnet: #73000a;
     --acm-blue: #0492d2;
-
     /* Greys */
     --grey-1: #111;
     --grey-2: #222;
     --grey-3: #333;
     --grey-5: #555;
     --grey-80: #808080;
-
     /* ===General Color Vars=== */
     /* These Color Vars will determine the other Functional Colors Below */
-
     /* Accent Colors */
     /* These include spots for HSL Colors, which are also used for generating gradients and shades of these colors. HTML Color Codes are also provided. */
     --accent-1: #BBE524;
@@ -104,65 +96,55 @@
     --accent-1-s: 79%;
     --accent-1-l: 52%;
     --accent-1: hsl(var(--accent-1-h), var(--accent-1-s), var(--accent-1-l));
-
     --accent-2: #FF230F;
     --accent-2-h: 5;
     --accent-2-s: 100%;
     --accent-2-l: 53%;
     --accent-2: hsl(var(--accent-2-h), var(--accent-2-s), var(--accent-2-l));
-
     --accent-3: #2682A6;
     --accent-3-h: 197;
     --accent-3-s: 63%;
     --accent-3-l: 40%;
     --accent-3: hsl(var(--accent-3-h), var(--accent-3-s), var(--accent-3-l));
-
     --accent-4: #fb9902;
     --accent-4-h: 36;
     --accent-4-s: 98%;
     --accent-4-l: 50%;
     --accent-4: hsl(var(--accent-4-h), var(--accent-4-s), var(--accent-4-l));
-
     --dark-color: #002C3D;
     --dark-color-h: 197;
     --dark-color-s: 100%;
     --dark-color-l: 12%;
     --dark-color: hsl(var(--dark-color-h), var(--dark-color-s), var(--dark-color-l));
-
     --light-color: #F0F7D4;
     --light-color-h: 72;
     --light-color-s: 69%;
     --light-color-l: 90%;
     --light-color: hsl(var(--light-color-h), var(--light-color-s), var(--light-color-l));
-
     /* ===Functional Colors===*/
     /* These Colors are generated feom the HSL Values given above. They may optionally be changed with a static color too if needed */
-
     /* Background Colors (Can change depending on user Light/Dark Mode Preference) */
     --light-background: white;
     --dark-background: var(--dark-color);
-
     /* Link Colors */
-    --link-normal: hsl(var(--accent-1-h), var(--accent-1-s), 35%); /* #81a013 */
+    --link-normal: hsl(var(--accent-1-h), var(--accent-1-s), 35%);
+    /* #81a013 */
     --link-highlight: var(--accent-1);
-
     /* Text Decoration Colors */
     --highlight: #ffff00;
     --hightlight-text-color: black;
-
-    --light-text-color: black; /* Light Color Scheme */
-    --dark-text-color: white; /* Dark Color Scheme */
-
-    --light-header-color: black; /* Light Color Scheme */
+    --light-text-color: black;
+    /* Light Color Scheme */
+    --dark-text-color: white;
+    /* Dark Color Scheme */
+    --light-header-color: black;
+    /* Light Color Scheme */
     --light-header-bar-color: #333;
-
-    --dark-header-color: white; /* Dark Color Scheme */
+    --dark-header-color: white;
+    /* Dark Color Scheme */
     --dark-header-bar-color: #aaa;
-
     --hr-color: #999;
-
     /* Table Colors */
-    
     --table-caption-bg: #999;
     --table-caption-text: white;
     --table-head-bg: var(--dark-color);
@@ -173,14 +155,32 @@
     --table-row-text: black;
     --table-footer-bg: white;
     --table-footer-text: var(--accent-3);
-
     /* Other Tags */
-    /* @TODO Finish This */
     --blockquote-bar-color: #555;
     --blockquote-bg-color: #eee;
     --blockquote-text-color: black;
 
-    
+    --figure-bg-color: var(--dark-color);
+    --figure-fg-color: white;
+    --figure-figure-color: #ccc;
+
+    --form-legend-bg-color: black;
+    --form-legend-text-color: white;
+    --form-border-color: #aaa;
+    --form-error-color: #ff0000;
+    --form-submit-color: var(--accent-1);
+    --form-submit-text-color: white;
+    --form-button-color: #333;
+    --form-button-hover-color: #aaa;
+    --form-button-text-color: white;
+    --form-text-input-border-color: #ccc;
+    --form-text-input-focused-border-glow-color: var(--accent-1);
+    --form-text-input-color: white;
+    --form-text-input-text-color: black;
+    --form-disabled: #999;
+    --form-label-color-light: #333;
+    --form-label-color-dark: #ccc;
+
 }
 
 /* HTML Tags */
@@ -191,8 +191,6 @@ body {
     color: var(--light-text-color);
 }
 
-
-
 @media only screen and (prefers-color-scheme: dark) {
     body {
         background-color: var(--dark-background);
@@ -201,8 +199,10 @@ body {
 }
 
 /* Content Block */
+
 main {
-    min-height: 80vh; /* Note: 1vh ~= 1% viewport Height */
+    min-height: 80vh;
+    /* Note: 1vh ~= 1% viewport Height */
     margin: 0px 0px;
     font-family: light;
 }
@@ -212,6 +212,7 @@ main.sidebar {
 }
 
 /* Use this to Center Items */
+
 .container {
     margin: 0% 20%;
     overflow: auto;
@@ -219,6 +220,7 @@ main.sidebar {
 }
 
 /* Makes Margins Smaller for Mobile Screens */
+
 @media only screen and (max-width: 767px) {
     .container {
         margin: 0% 1%;
@@ -227,23 +229,23 @@ main.sidebar {
 }
 
 /* Specific Printing Rules */
+
 @media only print {
     .container {
         margin: 0;
         width: 100%;
         overflow: hidden;
     }
-
     hr {
         background-color: #aaa;
     }
-
     .hide-for-print {
         display: none !important;
     }
 }
 
 /* Header Decorations */
+
 h1 {
     margin: 10px 0px;
     font-family: semibold;
@@ -306,6 +308,7 @@ h1.hbar, h2.hbar, h3.hbar, h4.hbar, h5.hbar, h6.hbar {
 }
 
 /* Don't Invert Colors when Printing */
+
 @media only screen {
     .invert {
         background-color: var(--light-header-color);
@@ -321,7 +324,6 @@ h1.hbar, h2.hbar, h3.hbar, h4.hbar, h5.hbar, h6.hbar {
         border-left: 5px solid var(--dark-header-bar-color);
         padding-left: 5px;
     }
-    
     h1.hbar, h2.hbar, h3.hbar, h4.hbar, h5.hbar, h6.hbar {
         border-bottom: 1px solid var(--dark-header-bar-color);
     }
@@ -364,10 +366,11 @@ img.noresize {
     width: auto;
     height: auto;
     margin: auto;
-    text-align:center;
-
+    text-align: center;
 }
+
 /* @TODO is this used? */
+
 img.noresize.right {
     margin-left: auto;
     margin-right: 0;
@@ -384,6 +387,7 @@ hr.white {
 }
 
 /* Table Styling */
+
 table {
     border-collapse: collapse;
     text-align: left;
@@ -491,9 +495,11 @@ dl dt {
 /* END Text Alignment */
 
 /* BEGIN Content Indentation */
+
 .indent {
     margin-left: 3em;
 }
+
 /* END Content Indentation */
 
 /* BEGIN Explicit Color Assignment Classes */
@@ -519,6 +525,7 @@ dl dt {
 }
 
 /* Don't invert colors when printing */
+
 @media only screen {
     .accent-1.invert {
         background-color: var(--accent-1);
@@ -539,6 +546,7 @@ dl dt {
 }
 
 /* Dark Color Scheme Inversions */
+
 @media only screen and (prefers-color-scheme: dark) {
     .accent-1.invert {
         background-color: var(--accent-1);
@@ -561,7 +569,7 @@ dl dt {
 /* END Explicit Color Assignment Classes */
 
 details {
-    background-color: rgba(0,0,0,1);
+    background-color: rgba(0, 0, 0, 1);
     font-family: semibold;
 }
 
@@ -575,7 +583,7 @@ details[open] {
     color: black;
 }
 
-details[open] > *:not(summary) {
+details[open]>*:not(summary) {
     font-family: light;
 }
 
@@ -587,19 +595,20 @@ details[open] summary {
 figure {
     margin: 5px 0px;
     padding: 0px;
-    background-color: #002C3D;
-    color: white;
+    background-color: var(--figure-bg-color);
+    color: var(--figure-fg-color);
 }
 
 figure .figure {
-    color: gray;
+    color: var(--figure-figure-color);
+    font-family: ultralight;
 }
 
 figure figcaption {
     margin: 0px;
     padding: 5px 5px 5px 20px;
-    font-family: ultralight;
-    border-left: 5px solid #004966;
+    font-family: bold;
+    text-align: center;
 }
 
 figure.white {
@@ -617,3 +626,184 @@ figure.white figcaption {
     text-align: center;
     padding: 0;
 }
+
+/* Default Form Styling */
+
+/* Default Fieldset Format */
+
+fieldset {
+    border: 1px solid  var(--form-border-color);
+    margin: 0px;
+    padding: 1em;
+}
+
+legend {
+    background-color: var(--form-legend-bg-color);
+    color: var(--form-legend-text-color);
+    font-family: title;
+    font-size: 25px;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0px;
+    width: auto;
+    /*display: contents;*/
+}
+
+/* This looks weird when styling the border */
+
+select {
+    font-family: light;
+    font-size: 16px;
+}
+
+textarea {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 2.5px;
+    border-radius: 5px 5px 0px 5px;
+    border: 1px solid var(--form-text-input-border-color);
+    font-family: light;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* 2 Different ways to get a button */
+
+button, input[type="button"] {
+    border: 0px;
+    padding: 5px;
+    font-family: medium;
+    font-size: 16px;
+    border-radius: 5px;
+    color: var(--form-button-text-color);
+    background-color: var(--form-button-color);
+}
+
+/* 2 Different ways to get a button */
+
+button:hover, input[type=button]:hover {
+    border: 0px;
+    padding: 5px;
+    font-family: medium;
+    font-size: 16px;
+    border-radius: 5px;
+    color: var(--form-button-color);
+    background-color: var(--form-button-text-color);
+}
+
+/* Reset Styling */
+
+input[type="reset"] {
+    border: 0px;
+    padding: 5px;
+    font-family: medium;
+    font-size: 16px;
+    border-radius: 5px;
+    color: var(--form-button-text-color);
+    background-color: var(--form-error-color);
+}
+
+/* Reset Styling */
+
+input[type="reset"]:hover {
+    border: 0px;
+    padding: 5px;
+    font-family: medium;
+    font-size: 16px;
+    border-radius: 5px;
+    color: var(--form-error-color);
+    background-color: var(--form-button-text-color);
+}
+
+/* Submit Styling */
+
+input[type="submit"] {
+    border: 0px;
+    padding: 5px;
+    font-family: medium;
+    font-size: 16px;
+    border-radius: 5px;
+    color: var(--form-submit-text-color);
+    background-color: var(--form-submit-color);
+}
+
+/* Submit Styling */
+
+input[type="submit"]:hover {
+    border: 0px;
+    padding: 5px;
+    font-family: medium;
+    font-size: 16px;
+    border-radius: 5px;
+    color: var(--form-submit-color);
+    background-color: var(--form-submit-text-color);
+}
+
+/* 2 Different ways to get a button, alternate style */
+
+button.hollow, input[type=button].hollow {
+    border: 2px solid var(--form-button-color);
+    padding: 5px;
+    font-family: medium;
+    font-size: 16px;
+    border-radius: 5px;
+    color: var(--form-button-color);
+    background-color: var(--form-button-text-color);
+}
+
+button.hollow:hover, input[type=button].hollow:hover {
+    box-shadow: inset 0px 0px 10px var(--form-button-hover-color);
+}
+
+/* General Element Styling */
+
+input {
+    /*width: 100%;*/
+    border-radius: 5px;
+    border: 1px solid var(--form-text-input-border-color);
+    background-color: var(--form-text-input-color);
+    padding: 5px;
+    font-family: light;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+input:focus, textarea:focus {
+    outline: var(--form-text-input-focused-border-glow-color) auto 1px;
+}
+
+input[type="text"] {
+    background-color: var(--form-text-input-color);
+    border: 1px solid var(--form-text-input-border-color);
+    border-radius: 3px;
+    padding: 5px;
+    font-family: light;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+input[type="color"] {
+    border: 0px;
+    padding: 0px;
+    width: 16px;
+    height: 16px;
+}
+
+input[disabled] {
+    background-color: var(--form-disabled);
+}
+
+
+label {
+    font-family: semibold;
+    color: var(--form-label-color-light);
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+    label {
+        color: var(--form-label-color-dark);
+    }
+}
+
+/* END Default Fieldset Format */
