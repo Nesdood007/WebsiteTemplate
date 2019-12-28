@@ -6,7 +6,8 @@
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link rel="stylesheet" type="text/css" href="style/cards.css">
     <link rel="stylesheet" type="text/css" href="style/navbar.css">
-    <!-- <link rel="stylesheet" type="text/css" href="style/header.css">
+    <link rel="stylesheet" type="text/css" href="style/header.css">
+    <!-- 
         <link rel="stylesheet" type="text/css" href="style/footer.css">
         <link rel="stylesheet" type="text/css" href="style/content.css">
         
@@ -26,7 +27,41 @@
 <body>
     <!-- this is the content of the page -->
     <main>
-        <section class="titlecard blue-green">
+        <header class="page-header oneline">
+            <div class="title">
+                <p>TEST</p>
+            </div>
+            <div class="menu">
+                <ul>
+                    <!-- For Dropdown Menus: the <li> element must be in class "dropdown" -->
+                    <li class="dropdown">
+                        <a href="https://google.com"> Home </a>
+                        <div class="dropdownContent">
+                        <p> Hello World </p>
+                        <p> Hello World </p>
+                        <p> This should be a Link! </p>
+                        <a href="#"> Link! </a>
+                        </div>
+                    </li>
+                    <li><span class="current">Help</span></li>
+                    <li> <span>About Us</span> </li>
+                    <li class="dropdown">
+                        <span> ... </span>
+                        <div class="dropdownContent">
+                        <p> Hello World </p>
+                        <p> Hello World </p>
+                        <p> This should be a Link! </p>
+                        <a href="#"> Link! </a>
+                        </div>
+                    </li>
+                    <li><span> Lorem </span></li>
+                    <li><span> ipsum </span></li>
+                    <li><a href="https://duckduckgo.com"> Test Link </a></li>
+                </ul>
+            </div>
+
+        </header>
+        <section class="titlecard bg-a1-a3">
             <div class="container light">
                 <h1> Hello World </h1>
                 <hr>
@@ -63,7 +98,7 @@
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
+                    <li>Not a Link</li>
                 </ul>
             </div>
         </nav>
