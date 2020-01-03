@@ -366,6 +366,13 @@
     background: white;
 }
 
+.flashcard.bg-triangles-test, .titlecard.bg-triangles-test {
+    background: repeating-linear-gradient(0deg, transparent 0px, transparent 15px, rgba(0,0,0,0.3) 15px, rgba(0,0,0,0.3) 20px),
+    repeating-linear-gradient(60deg, transparent 0px, transparent 15px, rgba(0,0,0,0.3) 15px, rgba(0,0,0,0.3) 20px),
+    repeating-linear-gradient(120deg, transparent 0px, transparent 15px, rgba(0,0,0,0.3) 15px, rgba(0,0,0,0.3) 20px),
+    linear-gradient(180deg, white 0%, black 100%);
+}
+
 /*** Foreground Styling Only (classes are prefaced by 'fg-')  ***/
 
 /* Testing Text Gradients */
