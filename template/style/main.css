@@ -189,6 +189,7 @@ body {
     margin: 0px;
     background-color: var(--light-background);
     color: var(--light-text-color);
+    font-family: light;
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -485,11 +486,11 @@ dl dt {
 /* BEGIN Text Alignment */
 
 .left {
-    text-align: left;
+    text-align: left !important;
 }
 
 .right {
-    text-align: right;
+    text-align: right !important;
 }
 
 /* END Text Alignment */
@@ -505,22 +506,22 @@ dl dt {
 /* BEGIN Explicit Color Assignment Classes */
 
 .accent-1 {
-    color: var(--accent-1);
+    color: var(--accent-1) !important;
     border-color: hsl(var(--accent-1-h), var(--accent-1-s), 30%) !important;
 }
 
 .accent-2 {
-    color: var(--accent-2);
+    color: var(--accent-2) !important;
     border-color: hsl(var(--accent-2-h), var(--accent-2-s), 30%) !important;
 }
 
 .accent-3 {
-    color: var(--accent-3);
+    color: var(--accent-3) !important;
     border-color: hsl(var(--accent-3-h), var(--accent-3-s), 30%) !important;
 }
 
 .accent-4 {
-    color: var(--accent-4);
+    color: var(--accent-4) !important;
     border-color: hsl(var(--accent-4-h), var(--accent-4-s), 30%) !important;
 }
 
