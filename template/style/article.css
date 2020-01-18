@@ -53,6 +53,7 @@ article img {
 .article-header .info {
     font-family: ultralight;
     margin: 0px;
+    
     padding: 0px;
     font-size: 13px;
     color: var(--article-info-color-light);
@@ -62,6 +63,10 @@ article img {
     .article-header .info {
         color: var(--article-info-color-dark);
     }
+}
+
+.article-header {
+    margin-bottom: 5px;
 }
 
 article .continue {

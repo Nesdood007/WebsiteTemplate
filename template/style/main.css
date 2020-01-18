@@ -505,22 +505,22 @@ dl dt {
 
 /* BEGIN Explicit Color Assignment Classes */
 
-.accent-1 {
+.accent-1:not(.invert) {
     color: var(--accent-1) !important;
     border-color: hsl(var(--accent-1-h), var(--accent-1-s), 30%) !important;
 }
 
-.accent-2 {
+.accent-2:not(.invert) {
     color: var(--accent-2) !important;
     border-color: hsl(var(--accent-2-h), var(--accent-2-s), 30%) !important;
 }
 
-.accent-3 {
+.accent-3:not(.invert) {
     color: var(--accent-3) !important;
     border-color: hsl(var(--accent-3-h), var(--accent-3-s), 30%) !important;
 }
 
-.accent-4 {
+.accent-4:not(.invert) {
     color: var(--accent-4) !important;
     border-color: hsl(var(--accent-4-h), var(--accent-4-s), 30%) !important;
 }
@@ -531,18 +531,22 @@ dl dt {
     .accent-1.invert {
         background-color: var(--accent-1);
         color: var(--light-background);
+        border-color: hsl(var(--accent-1-h), var(--accent-1-s), 30%);
     }
     .accent-2.invert {
         background-color: var(--accent-2);
         color: var(--light-background);
+        border-color: hsl(var(--accent-2-h), var(--accent-2-s), 30%);
     }
     .accent-3.invert {
         background-color: var(--accent-3);
         color: var(--light-background);
+        border-color: hsl(var(--accent-3-h), var(--accent-3-s), 30%);
     }
     .accent-4.invert {
         background-color: var(--accent-4);
         color: var(--light-background);
+        border-color: hsl(var(--accent-4-h), var(--accent-4-s), 30%);
     }
 }
 
